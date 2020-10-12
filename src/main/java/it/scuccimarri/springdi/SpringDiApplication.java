@@ -1,8 +1,8 @@
 package it.scuccimarri.springdi;
 
 import it.scuccimarri.springdi.controllers.*;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.*;
 
 @SpringBootApplication
@@ -17,6 +17,9 @@ public class SpringDiApplication {
 	// IoC is the runtime when the inection is actually happening.
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SpringDiApplication.class, args);
+
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController") ;
+        System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) ctx.getBean("myController");
 

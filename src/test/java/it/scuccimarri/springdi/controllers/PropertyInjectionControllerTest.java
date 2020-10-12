@@ -11,7 +11,7 @@ class PropertyInjectionControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectionController();
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
     }
 
     @Test

@@ -1,6 +1,7 @@
 package it.scuccimarri.springdi.controllers;
 
 import it.scuccimarri.springdi.services.*;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.*;
 
@@ -17,7 +18,8 @@ public class ConstructorInjectionController {
     private final GreetingService greetingService;
 
     // Autowired is optional from Spring 4.2
-    public ConstructorInjectionController(GreetingService greetingService) {
+    // With Qualifier you choose the implementation to inject
+    public ConstructorInjectionController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

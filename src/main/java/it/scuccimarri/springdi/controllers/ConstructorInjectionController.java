@@ -1,6 +1,8 @@
 package it.scuccimarri.springdi.controllers;
 
 import it.scuccimarri.springdi.services.*;
+import org.springframework.context.annotation.*;
+import org.springframework.stereotype.*;
 
 /* Types of Dependency Injection
     - By class properties - least preferred
@@ -9,10 +11,12 @@ import it.scuccimarri.springdi.services.*;
     - By Setters - Area of much debate
     - By Constructor - Most Preferred
  */
+@Controller
 public class ConstructorInjectionController {
 
     private final GreetingService greetingService;
 
+    // Autowired is optional from Spring 4.2
     public ConstructorInjectionController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }

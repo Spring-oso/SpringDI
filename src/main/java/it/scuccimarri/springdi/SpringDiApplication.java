@@ -23,6 +23,36 @@ public class SpringDiApplication {
 		String greeting = myController.sayHello();
 
 		System.out.println(greeting);
+
+        System.out.println(" ------- Property");
+
+        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) ctx.getBean("propertyInjectionController");
+        System.out.println(propertyInjectionController.getGreeting());
+
+        // No bean named 'propertyInjectionController' available
+        // because you have to define @Controller
+
+        // Then if you put this annotation you will have a NullPointerException
+        // because the service inside does not have the annotation @AutoWired
+
+        // You have to put the annotation @Service on the class GreetingServiceImpl
+
+        System.out.println(" ------- Setter");
+
+        SetterInjectionController setterInjectionController = (SetterInjectionController) ctx.getBean("setterInjectionController");
+        System.out.println(setterInjectionController.getGreeting());
+
+        // It does not work because you have to put
+        // @Controller on the class and @Autowired on the setter
+
+        System.out.println("--------- Constructor");
+
+        ConstructorInjectionController constructorInjectionController = (ConstructorInjectionController) ctx.getBean("constructorInjectionController");
+        System.out.println(constructorInjectionController.getGreeting());
+
+        // YOu have to put @Controller on the class and
+        // @Autowired is not necessary because on the constructor is optional
+        // from Spring 4.2
 	}
 
 }

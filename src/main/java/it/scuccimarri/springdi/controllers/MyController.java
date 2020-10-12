@@ -1,13 +1,18 @@
 package it.scuccimarri.springdi.controllers;
 
+import it.scuccimarri.springdi.services.*;
 import org.springframework.stereotype.*;
 
 @Controller
 public class MyController {
 
-    public String sayHello(){
-        System.out.println("Hello World!");
+    private final GreetingService greetingService;
 
-        return "Hi!";
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayHello(){
+        return greetingService.sayGreeting();
     }
 }

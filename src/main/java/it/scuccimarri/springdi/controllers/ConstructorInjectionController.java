@@ -18,7 +18,8 @@ public class ConstructorInjectionController {
     private final GreetingService greetingService;
 
     // Autowired is optional from Spring 4.2
-    // With Qualifier you choose the implementation to inject
+    // With Qualifier you choose the implementation to inject that
+    // override the primary choice
     public ConstructorInjectionController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }

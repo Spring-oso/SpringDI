@@ -24,6 +24,9 @@ public class SpringDiApplication {
 
 		System.out.println(greeting);
 
+        System.out.println(" ------- Bean");
+        System.out.println(myController.sayHello());
+
         System.out.println(" ------- Property");
 
         PropertyInjectionController propertyInjectionController = (PropertyInjectionController) ctx.getBean("propertyInjectionController");

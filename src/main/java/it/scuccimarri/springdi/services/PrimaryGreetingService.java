@@ -1,4 +1,4 @@
-package it.services;
+package it.scuccimarri.springdi.services;
 
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.*;

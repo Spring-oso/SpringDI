@@ -1,4 +1,4 @@
-package it.services;
+package it.scuccimarri.springdi.services;
 
 public interface GreetingService {
 

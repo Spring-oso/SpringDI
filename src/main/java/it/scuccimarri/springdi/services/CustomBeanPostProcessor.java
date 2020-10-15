@@ -1,4 +1,4 @@
-package it.services;
+package it.scuccimarri.springdi.services;
 
 import org.springframework.beans.*;
 import org.springframework.beans.factory.config.*;

@@ -4,10 +4,8 @@ import it.scuccimarri.springdi.controllers.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.*;
-import org.springframework.context.annotation.*;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"it.services", "it.scuccimarri.springdi"})
 public class SpringDiApplication {
 
 	// Dependency injection refers to the composition of your classes

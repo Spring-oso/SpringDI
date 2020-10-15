@@ -1,6 +1,6 @@
 package it.scuccimarri.springdi.controllers;
 
-import it.scuccimarri.springdi.services.*;
+import it.services.*;
 import org.springframework.stereotype.*;
 
 @Controller

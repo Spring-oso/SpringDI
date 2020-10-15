@@ -1,4 +1,4 @@
-package it.scuccimarri.springdi.services;
+package it.services;
 
 import org.springframework.stereotype.*;
 

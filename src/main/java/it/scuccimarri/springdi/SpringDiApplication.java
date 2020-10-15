@@ -21,14 +21,12 @@ public class SpringDiApplication {
         I18nController i18nController = (I18nController) ctx.getBean("i18nController") ;
         System.out.println(i18nController.sayHello());
 
-		MyController myController = (MyController) ctx.getBean("myController");
-
-		String greeting = myController.sayHello();
-
-		System.out.println(greeting);
-
         System.out.println(" ------- Bean");
+		MyController myController = (MyController) ctx.getBean("myController");
         System.out.println(myController.sayHello());
+
+        System.out.println(" ------- Bean Factory");
+        System.out.println(myController.sayAnotherHello());
 
         System.out.println(" ------- Property");
 

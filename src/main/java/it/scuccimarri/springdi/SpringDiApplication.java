@@ -1,6 +1,7 @@
 package it.scuccimarri.springdi;
 
 import it.scuccimarri.springdi.controllers.*;
+import it.scuccimarri.springdi.examplebeans.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.*;
@@ -57,6 +58,12 @@ public class SpringDiApplication {
         // YOu have to put @Controller on the class and
         // @Autowired is not necessary because on the constructor is optional
         // from Spring 4.2
+
+
+        System.out.println("Use external properties");
+        FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+        System.out.println(fakeDataSource.getUser());
+
 	}
 
 }

@@ -1,0 +1,36 @@
+# first comment
+
+name: Frascu
+
+names: # comment
+  - Frank
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+  author: Joe Buck
+  publisher: random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no # No, false
+
+string_val: "this is a quote"
+
+colon_string: "courses: one two three"
+
+include_new_lines: |
+  asdasd
+  asda asda dgferv
+  asedwer dfsdeer
+
+ignore_new_lines: >
+  dfswdef
+  rt rcf gfgrf
+  dgfgf fgfg

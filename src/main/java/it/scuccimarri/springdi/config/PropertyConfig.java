@@ -8,6 +8,8 @@ import org.springframework.context.support.*;
 import org.springframework.core.env.*;
 
 @Configuration
+// If you have more than one properties file you can use @PropertySources.
+// In this annotation you can define one @PropertySource for each source.
 @PropertySource("classpath:fakeproperties.properties")
 public class PropertyConfig {
 

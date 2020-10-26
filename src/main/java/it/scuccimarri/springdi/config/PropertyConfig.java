@@ -8,8 +8,12 @@ import org.springframework.context.support.*;
 import org.springframework.core.env.*;
 
 @Configuration
+
 // If you have more than one properties file you can use @PropertySources.
 // In this annotation you can define one @PropertySource for each source.
+
+// if you remove @PropertySource annotation, the properties are read from application.properties
+// that is the standard properties file for a Spring Boot Application
 @PropertySource("classpath:fakeproperties.properties")
 public class PropertyConfig {
 
